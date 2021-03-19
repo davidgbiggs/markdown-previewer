@@ -61,15 +61,39 @@ main {
 }
 
 #editor {
-  border: none;
+  $transition-length: 0.4s;
+  border: 0.125rem solid $theme-1;
   outline: none;
   margin-bottom: -0.3rem;
+  transition: background-color $transition-length, color $transition-length;
+  min-height: 15rem;
 }
 
 #editor:focus {
+  background-color: white;
+  color: black;
+}
+
+code {
+  background-color: lightcyan;
+  padding: 0.25rem;
+  display: inline-block;
+}
+
+blockquote {
+  margin-left: 0.6rem;
+  border-left: 0.3rem solid gray;
+  padding-left: 0.3rem;
+  background-color: lightcyan;
+  color: black;
+}
+
+tr,
+th,
+tbody,
+thead {
   border: 0.125rem solid white;
-  border-bottom-right-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
+  padding: 0.25rem;
 }
 
 #editor-box {
@@ -96,4 +120,13 @@ main {
   border-radius: 0.3rem;
   margin: 1rem;
   padding: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  #editor-box {
+    width: 70vw;
+  }
+  #preview-box {
+    width: 95vw;
+  }
 }

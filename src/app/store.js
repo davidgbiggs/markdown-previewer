@@ -1,8 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import previewReducer from "../features/previewer/previewSlice";
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    previewer: previewReducer,
   },
 });
